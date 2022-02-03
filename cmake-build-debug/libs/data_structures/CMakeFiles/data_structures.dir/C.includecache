@@ -19,4 +19,6 @@ C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.h
 C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.h
 stdlib.h
 -
+stdbool.h
+-
 

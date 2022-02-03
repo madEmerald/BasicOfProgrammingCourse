@@ -9,9 +9,11 @@
 C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.h
 stdlib.h
 -
+stdbool.h
+-
 
 C:/CLionProjects/BasicOfProgrammingCourse/main.c
-stdint.h
+assert.h
 -
 libs/data_structures/vector/vector.h
 C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.h

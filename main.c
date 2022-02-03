@@ -2,12 +2,12 @@
 #include "libs/data_structures/vector/vector.h"
 
 void test_pushBack_emptyVector() {
-    vector vector1 = createVector(0);
-    pushBack(&vector1, 1);
+    vector v = createVector(0);
+    pushBack(&v, 1);
 
-    assert(getVectorValue(&vector1, 0) == 1);
-    assert(vector1.size == 1);
-    assert(vector1.capacity == 1);
+    assert(getVectorValue(&v, 0) == 1);
+    assert(v.size == 1);
+    assert(v.capacity == 1);
 }
 
 void test_pushBack_fullVector() {
@@ -15,12 +15,14 @@ void test_pushBack_fullVector() {
     data[0] = 1;
     data[1] = 2;
 
-    vector vector1 = {data, 2, 2};
-    pushBack(&vector1, 3);
+    vector v = {data, 2, 2};
+    pushBack(&v, 3);
 
-    assert(vector1.capacity == 4);
-    assert(vector1.data[2] == 3);
-    assert(vector1.size == 3);
+    assert(v.capacity == 4);
+    assert(v.data[2] == 3);
+    assert(v.size == 3);
+
+    free(data);
 }
 
 void test_popBack_notEmptyVector() {
@@ -33,10 +35,53 @@ void test_popBack_notEmptyVector() {
     assert (v.capacity == 1);
 }
 
+void test_atVector_notEmptyVector() {
+    int *data = malloc(sizeof(int) * 2);
+    data[0] = 1;
+    data[1] = 2;
+
+    vector v = {data, 2, 2};
+    int *pointer = atVector(&v, 0);
+    assert(v.data[0] = *pointer);
+    assert(v.data[1] = *(pointer + 1));
+
+    free(data);
+}
+
+void test_atVector_requestToLastElement() {
+    int *data = malloc(sizeof(int) * 2);
+    data[0] = 4;
+    data[1] = 8;
+
+    vector v = {data, 2, 2};
+    int *pointer = atVector(&v, 1);
+    assert(*pointer == 8);
+
+    free(data);
+}
+
+void test_back_oneElementInVector() {
+    vector v = createVector(0);
+    pushBack(&v, 5);
+
+    assert(*back(&v) == 5);
+}
+
+void test_front_oneElementInVector() {
+    vector v = createVector(0);
+    pushBack(&v, 5);
+
+    assert(*front(&v) == 5);
+}
+
 void test() {
     test_pushBack_emptyVector();
     test_pushBack_fullVector();
     test_popBack_notEmptyVector();
+    test_atVector_notEmptyVector();
+    test_atVector_requestToLastElement();
+    test_back_oneElementInVector();
+    test_front_oneElementInVector();
 }
 
 int main() {

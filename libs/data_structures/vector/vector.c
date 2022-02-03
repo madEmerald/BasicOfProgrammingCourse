@@ -17,6 +17,11 @@ void sizeError() {
     exit(1);
 }
 
+void indexError(size_t index) {
+    fprintf(stderr, "IndexError: a[%zu] is not exists", index);
+    exit(1);
+}
+
 vector createVector(const size_t n) {
     int *data = malloc(sizeof(int) * n);
     if (data == NULL)
@@ -75,4 +80,25 @@ void popBack(vector *v) {
         sizeError();
 
     v->size--;
+}
+
+int* atVector(vector *v, size_t index) {
+    if (index < 0 || index >= v->size)
+        indexError(index);
+
+    return &v->data[index];
+}
+
+int* back(vector *v) {
+    if (v->size == 0)
+        sizeError();
+
+    return &v->data[v->size - 1];
+}
+
+int* front(vector *v) {
+    if (v->size == 0)
+        sizeError();
+
+    return &v->data[0];
 }
