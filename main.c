@@ -131,6 +131,30 @@ void test_isFull() {
     assert(isFull(&v));
 }
 
+void test_getVectorElement_requestToLastElement() {
+    int *data = malloc(sizeof(int) * 2);
+    data[0] = 4;
+    data[1] = 1;
+
+    vector v = {data, 2, 2};
+    int element = getVectorValue(&v, 1);
+    assert(element == 1);
+
+    deleteVector(&v);
+}
+
+void test_getVectorElement_requestToFirstElement() {
+    int *data = malloc(sizeof(int) * 2);
+    data[0] = 7;
+    data[1] = 3;
+
+    vector v = {data, 2, 2};
+    int element = getVectorValue(&v, 0);
+    assert(element == 7);
+
+    deleteVector(&v);
+}
+
 void test() {
     test_reserve_emptyVector();
     test_reserve_sizeChanging();
