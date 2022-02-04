@@ -1,6 +1,50 @@
 #include <assert.h>
 #include "libs/data_structures/vector/vector.h"
 
+void test_reserve_emptyVector() {
+    vector v = createVector(0);
+    pushBack(&v, 1);
+    reserve(&v, 0);
+
+    assert(v.data == NULL);
+}
+
+void test_reserve_sizeChanging() {
+    int *data = malloc(sizeof(int) * 2);
+    data[0] = 1;
+    data[1] = 2;
+
+    vector v = {data, 2, 2};
+    reserve(&v, 1);
+
+    assert(v.size == 1);
+    assert(v.capacity == 1);
+
+    deleteVector(&v);
+}
+
+void test_shrinkToFit() {
+    int *data = malloc(sizeof(int) * 2);
+    data[0] = 1;
+    data[1] = 2;
+
+    vector v = {data, 2, 5};
+    shrinkToFit(&v);
+
+    assert(v.capacity == 2);
+
+    deleteVector(&v);
+}
+
+void test_shrinkToFit_emptyVector() {
+    vector  v = createVector(0);
+    shrinkToFit(&v);
+
+    assert(v.capacity == 0);
+
+    deleteVector(&v);
+}
+
 void test_pushBack_emptyVector() {
     vector v = createVector(0);
     pushBack(&v, 1);
@@ -22,7 +66,7 @@ void test_pushBack_fullVector() {
     assert(v.data[2] == 3);
     assert(v.size == 3);
 
-    free(data);
+    deleteVector(&v);
 }
 
 void test_popBack_notEmptyVector() {
@@ -45,7 +89,7 @@ void test_atVector_notEmptyVector() {
     assert(v.data[0] = *pointer);
     assert(v.data[1] = *(pointer + 1));
 
-    free(data);
+    deleteVector(&v);
 }
 
 void test_atVector_requestToLastElement() {
@@ -57,7 +101,7 @@ void test_atVector_requestToLastElement() {
     int *pointer = atVector(&v, 1);
     assert(*pointer == 8);
 
-    free(data);
+    deleteVector(&v);
 }
 
 void test_back_oneElementInVector() {
@@ -74,7 +118,24 @@ void test_front_oneElementInVector() {
     assert(*front(&v) == 5);
 }
 
+void test_isEmpty() {
+    vector v = createVector(1);
+
+    assert(isEmpty(&v));
+}
+
+void test_isFull() {
+    vector v = createVector(1);
+    pushBack(&v, 5);
+
+    assert(isFull(&v));
+}
+
 void test() {
+    test_reserve_emptyVector();
+    test_reserve_sizeChanging();
+    test_shrinkToFit();
+    test_shrinkToFit_emptyVector();
     test_pushBack_emptyVector();
     test_pushBack_fullVector();
     test_popBack_notEmptyVector();
@@ -82,6 +143,8 @@ void test() {
     test_atVector_requestToLastElement();
     test_back_oneElementInVector();
     test_front_oneElementInVector();
+    test_isEmpty();
+    test_isFull();
 }
 
 int main() {
