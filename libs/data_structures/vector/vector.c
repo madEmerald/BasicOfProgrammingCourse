@@ -23,7 +23,7 @@ void indexError(size_t index) {
 }
 
 vector createVector(const size_t n) {
-    int *data = malloc(sizeof(int) * n);
+    int *data = (int*)malloc(sizeof(int) * n);
     if (data == NULL)
         allocationError();
 
@@ -34,7 +34,7 @@ void reserve(vector *v, const size_t newCapacity) {
     if (newCapacity == 0)
         v->data = NULL;
     else {
-        int *data = realloc(v->data, sizeof(int) * newCapacity);
+        int *data = (int*)realloc(v->data, sizeof(int) * newCapacity);
         if (data == NULL)
             allocationError();
     }

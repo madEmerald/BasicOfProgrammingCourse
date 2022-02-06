@@ -169,6 +169,8 @@ void test() {
     test_front_oneElementInVector();
     test_isEmpty();
     test_isFull();
+    test_getVectorElement_requestToLastElement();
+    test_getVectorElement_requestToFirstElement();
 }
 
 int main() {
