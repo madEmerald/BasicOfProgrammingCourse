@@ -1,5 +1,6 @@
 #include <assert.h>
 #include "libs/data_structures/vector/vector.h"
+#include "libs/data_structures/vector/vectorVoid.h"
 
 void test_reserve_emptyVector() {
     vector v = createVector(0);
@@ -175,6 +176,8 @@ void test() {
 
 int main() {
     test();
+
+    vectorVoid v;
 
     return 0;
 }

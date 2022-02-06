@@ -12,9 +12,15 @@ stdlib.h
 stdbool.h
 -
 
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vectorVoid.h
+limits.h
+-
+
 C:/CLionProjects/BasicOfProgrammingCourse/main.c
 assert.h
 -
 libs/data_structures/vector/vector.h
 C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.h
+libs/data_structures/vector/vectorVoid.h
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vectorVoid.h
 

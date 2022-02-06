@@ -116,6 +116,12 @@
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vectorVoid.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vectorVoid.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/main.c">
 			<Option target="BasicOfProgrammingCource"/>
 		</Unit>
