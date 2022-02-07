@@ -6,15 +6,29 @@
 
 #IncludeRegexTransform: 
 
+C:/CLionProjects/BasicOfProgrammingCourse/libs/algorithms/basicAlgorithms/basicAlgorithms.h
+
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/errors/errors.c
+stdio.h
+-
+stdlib.h
+-
+errors.h
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/errors/errors.h
+
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/errors/errors.h
+
 C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.c
 malloc.h
 -
 stdio.h
 -
-stdlib.h
--
 vector.h
 C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.h
+../errors/errors.h
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/errors/errors.h
+../../algorithms/basicAlgorithms/basicAlgorithms.h
+C:/CLionProjects/BasicOfProgrammingCourse/libs/algorithms/basicAlgorithms/basicAlgorithms.h
 
 C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.h
 stdlib.h
@@ -23,4 +37,22 @@ stdbool.h
 -
 
 C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vectorVoid.c
+malloc.h
+-
+stdio.h
+-
+string.h
+-
+vectorVoid.h
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vectorVoid.h
+../errors/errors.h
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/errors/errors.h
+../../algorithms/basicAlgorithms/basicAlgorithms.h
+C:/CLionProjects/BasicOfProgrammingCourse/libs/algorithms/basicAlgorithms/basicAlgorithms.h
+
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vectorVoid.h
+limits.h
+-
+stdbool.h
+-
 

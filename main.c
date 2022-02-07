@@ -1,4 +1,5 @@
 #include <assert.h>
+#include <stdio.h>
 #include "libs/data_structures/vector/vector.h"
 #include "libs/data_structures/vector/vectorVoid.h"
 
@@ -38,7 +39,7 @@ void test_shrinkToFit() {
 }
 
 void test_shrinkToFit_emptyVector() {
-    vector  v = createVector(0);
+    vector v = createVector(0);
     shrinkToFit(&v);
 
     assert(v.capacity == 0);
@@ -176,8 +177,6 @@ void test() {
 
 int main() {
     test();
-
-    vectorVoid v;
 
     return 0;
 }

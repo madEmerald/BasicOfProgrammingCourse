@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/BasicOfProgrammingCource.dir/all
+all: CMakeFiles/BasicOfProgrammingCourse.dir/all
 all: libs/all
 .PHONY : all
 
@@ -71,7 +71,7 @@ preinstall: libs/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/BasicOfProgrammingCource.dir/clean
+clean: CMakeFiles/BasicOfProgrammingCourse.dir/clean
 clean: libs/clean
 .PHONY : clean
 
@@ -80,15 +80,33 @@ clean: libs/clean
 
 # Recursive "all" directory target.
 libs/all: libs/data_structures/all
+libs/all: libs/algorithms/all
 .PHONY : libs/all
 
 # Recursive "preinstall" directory target.
 libs/preinstall: libs/data_structures/preinstall
+libs/preinstall: libs/algorithms/preinstall
 .PHONY : libs/preinstall
 
 # Recursive "clean" directory target.
 libs/clean: libs/data_structures/clean
+libs/clean: libs/algorithms/clean
 .PHONY : libs/clean
+
+#=============================================================================
+# Directory level rules for directory libs/algorithms
+
+# Recursive "all" directory target.
+libs/algorithms/all: libs/algorithms/CMakeFiles/algorithms.dir/all
+.PHONY : libs/algorithms/all
+
+# Recursive "preinstall" directory target.
+libs/algorithms/preinstall:
+.PHONY : libs/algorithms/preinstall
+
+# Recursive "clean" directory target.
+libs/algorithms/clean: libs/algorithms/CMakeFiles/algorithms.dir/clean
+.PHONY : libs/algorithms/clean
 
 #=============================================================================
 # Directory level rules for directory libs/data_structures
@@ -106,30 +124,31 @@ libs/data_structures/clean: libs/data_structures/CMakeFiles/data_structures.dir/
 .PHONY : libs/data_structures/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/BasicOfProgrammingCource.dir
+# Target rules for target CMakeFiles/BasicOfProgrammingCourse.dir
 
 # All Build rule for target.
-CMakeFiles/BasicOfProgrammingCource.dir/all: libs/data_structures/CMakeFiles/data_structures.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCource.dir\build.make CMakeFiles/BasicOfProgrammingCource.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCource.dir\build.make CMakeFiles/BasicOfProgrammingCource.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target BasicOfProgrammingCource"
-.PHONY : CMakeFiles/BasicOfProgrammingCource.dir/all
+CMakeFiles/BasicOfProgrammingCourse.dir/all: libs/data_structures/CMakeFiles/data_structures.dir/all
+CMakeFiles/BasicOfProgrammingCourse.dir/all: libs/algorithms/CMakeFiles/algorithms.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target BasicOfProgrammingCourse"
+.PHONY : CMakeFiles/BasicOfProgrammingCourse.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/BasicOfProgrammingCource.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/BasicOfProgrammingCource.dir/all
+CMakeFiles/BasicOfProgrammingCourse.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/BasicOfProgrammingCourse.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/BasicOfProgrammingCource.dir/rule
+.PHONY : CMakeFiles/BasicOfProgrammingCourse.dir/rule
 
 # Convenience name for target.
-BasicOfProgrammingCource: CMakeFiles/BasicOfProgrammingCource.dir/rule
-.PHONY : BasicOfProgrammingCource
+BasicOfProgrammingCourse: CMakeFiles/BasicOfProgrammingCourse.dir/rule
+.PHONY : BasicOfProgrammingCourse
 
 # clean rule for target.
-CMakeFiles/BasicOfProgrammingCource.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCource.dir\build.make CMakeFiles/BasicOfProgrammingCource.dir/clean
-.PHONY : CMakeFiles/BasicOfProgrammingCource.dir/clean
+CMakeFiles/BasicOfProgrammingCourse.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/clean
+.PHONY : CMakeFiles/BasicOfProgrammingCourse.dir/clean
 
 #=============================================================================
 # Target rules for target libs/data_structures/CMakeFiles/data_structures.dir
@@ -138,12 +157,12 @@ CMakeFiles/BasicOfProgrammingCource.dir/clean:
 libs/data_structures/CMakeFiles/data_structures.dir/all:
 	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/depend
 	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles --progress-num=3,4,5 "Built target data_structures"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles --progress-num=5,6,7,8 "Built target data_structures"
 .PHONY : libs/data_structures/CMakeFiles/data_structures.dir/all
 
 # Build rule for subdir invocation for target.
 libs/data_structures/CMakeFiles/data_structures.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libs/data_structures/CMakeFiles/data_structures.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles 0
 .PHONY : libs/data_structures/CMakeFiles/data_structures.dir/rule
@@ -156,6 +175,32 @@ data_structures: libs/data_structures/CMakeFiles/data_structures.dir/rule
 libs/data_structures/CMakeFiles/data_structures.dir/clean:
 	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/clean
 .PHONY : libs/data_structures/CMakeFiles/data_structures.dir/clean
+
+#=============================================================================
+# Target rules for target libs/algorithms/CMakeFiles/algorithms.dir
+
+# All Build rule for target.
+libs/algorithms/CMakeFiles/algorithms.dir/all:
+	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/depend
+	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target algorithms"
+.PHONY : libs/algorithms/CMakeFiles/algorithms.dir/all
+
+# Build rule for subdir invocation for target.
+libs/algorithms/CMakeFiles/algorithms.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libs/algorithms/CMakeFiles/algorithms.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles 0
+.PHONY : libs/algorithms/CMakeFiles/algorithms.dir/rule
+
+# Convenience name for target.
+algorithms: libs/algorithms/CMakeFiles/algorithms.dir/rule
+.PHONY : algorithms
+
+# clean rule for target.
+libs/algorithms/CMakeFiles/algorithms.dir/clean:
+	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/clean
+.PHONY : libs/algorithms/CMakeFiles/algorithms.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -1,26 +1,10 @@
 #include <malloc.h>
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 #include "vectorVoid.h"
+#include "../errors/errors.h"
+#include "../../algorithms/basicAlgorithms/basicAlgorithms.h"
 
-int max2(const int a, const int b) {
-    return a > b ? a : b;
-}
-
-void allocationError() {
-    fprintf(stderr, "bad alloc");
-    exit(1);
-}
-
-void sizeError() {
-    fprintf(stderr, "size error");
-    exit(1);
-}
-
-void indexError(size_t index) {
-    fprintf(stderr, "IndexError: a[%zu] is not exists", index);
-    exit(1);
-}
 
 vectorVoid createVectorV(const size_t n, const size_t baseTypeSize) {
     void *data = malloc(sizeof(baseTypeSize) * n);
@@ -54,4 +38,36 @@ void clearV(vectorVoid *v) {
 
 void deleteVectorV(vectorVoid *v) {
     free(v->data);
+}
+
+bool isEmptyV(vectorVoid *v) {
+    return v->size == 0;
+}
+
+bool isFullV(vectorVoid *v) {
+    return v->size == v->capacity;
+}
+
+void getVectorValueV(vectorVoid *v, size_t index, void *destination) {
+    char *source = (char *) v->data + index * v->baseTypeSize;
+    memcpy(destination, source, v->baseTypeSize);
+}
+
+void setVectorValueV(vectorVoid *v, size_t index, void *source) {
+    char *destination = (char*) v->data + index * v->baseTypeSize;
+    memcpy(destination, source, v->baseTypeSize);
+}
+
+void popBackV(vectorVoid *v) {
+    if (v->size == 0)
+        sizeError();
+
+    v->size--;
+}
+
+void pushBackV(vectorVoid *v, void *source) {
+    if (isFullV(v))
+        reserveV(v, max2(1, v->capacity * 2));
+
+    memcpy(v->data + v->size++ * v->baseTypeSize, source, v->baseTypeSize);
 }

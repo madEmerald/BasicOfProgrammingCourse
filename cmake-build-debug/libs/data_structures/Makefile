@@ -129,6 +129,30 @@ data_structures/fast:
 	cd /d C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/build
 .PHONY : data_structures/fast
 
+errors/errors.obj: errors/errors.c.obj
+.PHONY : errors/errors.obj
+
+# target to build an object file
+errors/errors.c.obj:
+	cd /d C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/errors/errors.c.obj
+.PHONY : errors/errors.c.obj
+
+errors/errors.i: errors/errors.c.i
+.PHONY : errors/errors.i
+
+# target to preprocess a source file
+errors/errors.c.i:
+	cd /d C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/errors/errors.c.i
+.PHONY : errors/errors.c.i
+
+errors/errors.s: errors/errors.c.s
+.PHONY : errors/errors.s
+
+# target to generate assembly for a file
+errors/errors.c.s:
+	cd /d C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/errors/errors.c.s
+.PHONY : errors/errors.c.s
+
 vector/vector.obj: vector/vector.c.obj
 .PHONY : vector/vector.obj
 
@@ -186,6 +210,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... data_structures
+	@echo ... errors/errors.obj
+	@echo ... errors/errors.i
+	@echo ... errors/errors.s
 	@echo ... vector/vector.obj
 	@echo ... vector/vector.i
 	@echo ... vector/vector.s

@@ -87,6 +87,8 @@ BasicOfProgrammingCourse_EXTERNAL_OBJECTS =
 
 BasicOfProgrammingCourse.exe: CMakeFiles/BasicOfProgrammingCourse.dir/main.c.obj
 BasicOfProgrammingCourse.exe: CMakeFiles/BasicOfProgrammingCourse.dir/build.make
+BasicOfProgrammingCourse.exe: libs/data_structures/libdata_structures.a
+BasicOfProgrammingCourse.exe: libs/algorithms/libalgorithms.a
 BasicOfProgrammingCourse.exe: CMakeFiles/BasicOfProgrammingCourse.dir/linklibs.rsp
 BasicOfProgrammingCourse.exe: CMakeFiles/BasicOfProgrammingCourse.dir/objects1.rsp
 BasicOfProgrammingCourse.exe: CMakeFiles/BasicOfProgrammingCourse.dir/link.txt

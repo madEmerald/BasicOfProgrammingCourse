@@ -1,26 +1,8 @@
 #include <malloc.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include "vector.h"
-
-int max2(const int a, const int b) {
-    return a > b ? a : b;
-}
-
-void allocationError() {
-    fprintf(stderr, "bad alloc");
-    exit(1);
-}
-
-void sizeError() {
-    fprintf(stderr, "size error");
-    exit(1);
-}
-
-void indexError(size_t index) {
-    fprintf(stderr, "IndexError: a[%zu] is not exists", index);
-    exit(1);
-}
+#include "../errors/errors.h"
+#include "../../algorithms/basicAlgorithms/basicAlgorithms.h"
 
 vector createVector(const size_t n) {
     int *data = (int*)malloc(sizeof(int) * n);

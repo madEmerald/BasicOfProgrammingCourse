@@ -116,17 +116,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named BasicOfProgrammingCource
+# Target rules for targets named BasicOfProgrammingCourse
 
 # Build rule for target.
-BasicOfProgrammingCource: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 BasicOfProgrammingCource
-.PHONY : BasicOfProgrammingCource
+BasicOfProgrammingCourse: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 BasicOfProgrammingCourse
+.PHONY : BasicOfProgrammingCourse
 
 # fast build rule for target.
-BasicOfProgrammingCource/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCource.dir\build.make CMakeFiles/BasicOfProgrammingCource.dir/build
-.PHONY : BasicOfProgrammingCource/fast
+BasicOfProgrammingCourse/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/build
+.PHONY : BasicOfProgrammingCourse/fast
 
 #=============================================================================
 # Target rules for targets named data_structures
@@ -141,12 +141,25 @@ data_structures/fast:
 	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/build
 .PHONY : data_structures/fast
 
+#=============================================================================
+# Target rules for targets named algorithms
+
+# Build rule for target.
+algorithms: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 algorithms
+.PHONY : algorithms
+
+# fast build rule for target.
+algorithms/fast:
+	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
+.PHONY : algorithms/fast
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCource.dir\build.make CMakeFiles/BasicOfProgrammingCource.dir/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -154,7 +167,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCource.dir\build.make CMakeFiles/BasicOfProgrammingCource.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -162,7 +175,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCource.dir\build.make CMakeFiles/BasicOfProgrammingCource.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -173,7 +186,8 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... BasicOfProgrammingCource
+	@echo ... BasicOfProgrammingCourse
+	@echo ... algorithms
 	@echo ... data_structures
 	@echo ... main.obj
 	@echo ... main.i
