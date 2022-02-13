@@ -4,6 +4,10 @@
 libs/data_structures/CMakeFiles/data_structures.dir/errors/errors.c.obj: \
  ../libs/data_structures/errors/errors.c \
  ../libs/data_structures/errors/errors.h
+libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix.c.obj: \
+ ../libs/algorithms/basicAlgorithms/basicAlgorithms.h \
+ ../libs/data_structures/matrix/matrix.c \
+ ../libs/data_structures/matrix/matrix.h
 libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj: \
  ../libs/algorithms/basicAlgorithms/basicAlgorithms.h \
  ../libs/data_structures/errors/errors.h \

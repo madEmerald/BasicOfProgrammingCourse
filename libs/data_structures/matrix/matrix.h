@@ -24,3 +24,7 @@ void inputMatrices(matrix *ms, int nMatrices);
 void outputMatrix(matrix m);
 
 void outputMatrices(matrix *ms, int nMatrices);
+
+void swapRows(matrix m, int i1, int i2);
+
+void swapCols(matrix m, int i1, int i2);

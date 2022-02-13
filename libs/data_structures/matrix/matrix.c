@@ -1,6 +1,7 @@
 #include <malloc.h>
 #include <stdio.h>
 #include "matrix.h"
+#include "../../algorithms/basicAlgorithms/basicAlgorithms.h"
 
 matrix getMemMatrix(int nRows, int nCols) {
     int **values = (int **) malloc(sizeof(int *) * nRows);
@@ -39,6 +40,7 @@ void inputMatrices(matrix *ms, int nMatrices) {
         inputMatrix(ms[i]);
         printf("\n");
     }
+    printf("\n");
 }
 
 void outputMatrix(matrix m) {
@@ -47,11 +49,19 @@ void outputMatrix(matrix m) {
             printf("%d ", m.values[i][j]);
         printf("\n");
     }
+    printf("\n");
 }
 
 void outputMatrices(matrix *ms, int nMatrices) {
-    for (int i = 0; i < nMatrices; i++) {
+    for (int i = 0; i < nMatrices; i++)
         outputMatrix(ms[i]);
-        printf("\n");
-    }
+}
+
+void swapRows(matrix m, const int i1, const int i2) {
+    swap(&m.values[i1], &m.values[i2], sizeof(int **));
+}
+
+void swapCols(matrix m, const int j1, const int j2) {
+    for (int i = 0; i < m.nRows; i++)
+        swap(&m.values[i][j1], &m.values[i][j2], sizeof(int));
 }
