@@ -16,3 +16,11 @@ matrix *getMemArrayOfMatrices(int nMatrices, int nRows, int nCols);
 void freeMemMatrix(matrix m);
 
 void freeMemMatrices(matrix *ms, int nMatrices);
+
+void inputMatrix(matrix m);
+
+void inputMatrices(matrix *ms, int nMatrices);
+
+void outputMatrix(matrix m);
+
+void outputMatrices(matrix *ms, int nMatrices);
