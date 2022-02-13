@@ -158,6 +158,12 @@
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/errors/errors.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/matrix/matrix.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/matrix/matrix.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.c">
 			<Option target="data_structures"/>
 		</Unit>

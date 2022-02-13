@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/errors/errors.c" "C:/CLionProjects/BasicOfProgrammingCourse/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/errors/errors.c.obj"
+  "C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/matrix/matrix.c" "C:/CLionProjects/BasicOfProgrammingCourse/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix.c.obj"
   "C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.c" "C:/CLionProjects/BasicOfProgrammingCourse/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj"
   "C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vectorVoid.c" "C:/CLionProjects/BasicOfProgrammingCourse/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/vector/vectorVoid.c.obj"
   )
