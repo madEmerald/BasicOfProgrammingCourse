@@ -105,3 +105,43 @@ void insertionSortColsMatrixByColCriteria(matrix m, int (*criteria)(int *, int))
     }
     free(sortKeys);
 }
+
+bool isSquareMatrix(const matrix m) {
+    return m.nRows == m.nCols;
+}
+
+bool areTwoMatricesEqual(const matrix m1, const matrix m2) {
+    if (m1.nRows != m2.nRows || m1.nCols != m2.nCols)
+        return false;
+
+    for (int i = 0; i < m1.nRows; i++)
+        for (int j = 0; j < m1.nCols; j++)
+            if (m1.values[i][j] != m2.values[i][j])
+                return false;
+    return true;
+}
+
+bool isEMatrix(const matrix m) {
+    for (int i = 0; i < m.nRows; i++)
+        for (int j = 0; j < m.nCols; j++)
+            if (i == j) {
+                if (m.values[i][j] != 1)
+                    return false;
+            }
+            else
+                if (m.values[i][j] != 0)
+                    return false;
+    return true;
+}
+
+bool isSymmetricMatrix(const matrix m) {
+    if (!isSquareMatrix(m))
+        return false;
+
+    for (int i = 0; i < m.nRows; i++)
+        for (int j = i + 1; j < m.nCols; j++)
+            if (m.values[j][i] != m.values[i][j])
+                return false;
+
+    return true;
+}
