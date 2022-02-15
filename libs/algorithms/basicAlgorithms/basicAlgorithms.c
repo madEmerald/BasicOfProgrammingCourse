@@ -6,6 +6,10 @@ long long max2(long long a, long long b) {
     return a > b ? a : b;
 }
 
+long long min2(long long a, long long b) {
+    return a < b ? a : b;
+}
+
 long long max3(const long long a, const long long b, const long long c) {
     return max2(max2(a, b), c);
 }
