@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/matrix/matrix.h
+
+C:/CLionProjects/BasicOfProgrammingCourse/main.c
+assert.h
+-
+libs/data_structures/matrix/matrix.h
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/matrix/matrix.h
+
