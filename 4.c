@@ -23,6 +23,8 @@ void getSquareOfMatrixIfSymmetric(matrix *m) {
                 squareOfMatrix.values[i][j] = squareOfMatrix.values[j][i];
 
         m->values = squareOfMatrix.values;
+
+        freeMemMatrix(squareOfMatrix);
     }
 }
 
