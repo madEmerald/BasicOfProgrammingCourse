@@ -52,3 +52,5 @@ position getMaxValuePos(matrix m);
 matrix createMatrixFromArray(const int *a, size_t nRows, size_t nCols);
 
 matrix *createArrayOfMatrixFromArray(const int *values, size_t nMatrices, size_t nRows, size_t nCols);
+
+matrix mulMatrices(matrix m1, matrix m2);

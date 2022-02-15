@@ -206,3 +206,20 @@ matrix *createArrayOfMatrixFromArray(const int *values, size_t nMatrices, size_t
 
     return ms;
 }
+
+int getElementOfProductOfMatrices(const matrix m1, const matrix m2, const int rowIndex, const int colIndex) {
+    int element = 0;
+    for (int i = 0; i < m1.nRows; i++)
+        element += m1.values[i][colIndex] * m2.values[rowIndex][i];
+
+    return element;
+}
+
+matrix mulMatrices(const matrix m1, const matrix m2) {
+    matrix product = getMemMatrix(m1.nRows, m2.nCols);
+
+    for (int i = 0; i < m1.nRows; i++)
+        for (int j = 0; j < m2.nCols; j++)
+            product.values[i][j] = getElementOfProductOfMatrices(m1, m2, i, j);
+    return product;
+}
