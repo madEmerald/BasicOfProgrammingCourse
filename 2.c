@@ -24,5 +24,6 @@ int main() {
 
     outputMatrix(a);
 
+    freeMemMatrix(a);
     return 0;
 }
