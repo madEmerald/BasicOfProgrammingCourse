@@ -65,3 +65,43 @@ void swapCols(matrix m, const int j1, const int j2) {
     for (int i = 0; i < m.nRows; i++)
         swap(&m.values[i][j1], &m.values[i][j2], sizeof(int));
 }
+
+void insertionSortRowsMatrixByRowCriteria(matrix m, int (*criteria)(int *, int)) {
+    int *sortKeys = malloc(m.nRows * sizeof(int));
+    for (int i = 0; i < m.nRows; i++)
+        sortKeys[i] = criteria(m.values[i], m.nCols);
+
+    for (size_t sortedPartLength = 1; sortedPartLength < m.nRows; sortedPartLength++) {
+        int t = sortKeys[sortedPartLength];
+        int i = sortedPartLength;
+        while (i > 0 && sortKeys[i - 1] > t) {
+            swap(&sortKeys[i], &sortKeys[i - 1], sizeof(int));
+            swapRows(m, i, i - 1);
+            i--;
+        }
+    }
+    free(sortKeys);
+}
+
+void insertionSortColsMatrixByColCriteria(matrix m, int (*criteria)(int *, int)) {
+    int *sortKeys = malloc(m.nCols * sizeof(int));
+    int *colElements = malloc(m.nRows * sizeof(int));
+    for (int j = 0; j < m.nCols; j++) {
+        for (int i = 0; i < m.nRows; i++)
+            colElements[i] = m.values[i][j];
+
+        sortKeys[j] = criteria(colElements, m.nRows);
+    }
+    free(colElements);
+
+    for (size_t sortedPartLength = 1; sortedPartLength < m.nCols; sortedPartLength++) {
+        int t = sortKeys[sortedPartLength];
+        int j = sortedPartLength;
+        while (j > 0 && sortKeys[j - 1] > t) {
+            swap(&sortKeys[j], &sortKeys[j - 1], sizeof(int));
+            swapCols(m, j, j - 1);
+            j--;
+        }
+    }
+    free(sortKeys);
+}

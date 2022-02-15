@@ -28,3 +28,7 @@ void outputMatrices(matrix *ms, int nMatrices);
 void swapRows(matrix m, int i1, int i2);
 
 void swapCols(matrix m, int i1, int i2);
+
+void insertionSortRowsMatrixByRowCriteria(matrix m, int (*criteria)(int *, int));
+
+void insertionSortColsMatrixByColCriteria(matrix m, int (*criteria)(int *, int));
