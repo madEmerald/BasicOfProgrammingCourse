@@ -161,3 +161,27 @@ void transposeSquareMatrix(matrix m) {
 
     freeMemMatrix(newMatrix);
 }
+
+position getMinValuePos(const matrix m) {
+    int min = m.values[0][0];
+    position minElementPosition = {0, 0};
+    for (int i = 0; i < m.nRows; i++)
+        for (int j = 0; j < m.nCols; j++)
+            if (m.values[i][j] < min) {
+                minElementPosition = (position) {i, j};
+                min = m.values[i][j];
+            }
+    return minElementPosition;
+}
+
+position getMaxValuePos(const matrix m) {
+    int max = m.values[0][0];
+    position maxElementPosition = {0, 0};
+    for (int i = 0; i < m.nRows; i++)
+        for (int j = 0; j < m.nCols; j++)
+            if (m.values[i][j] > max) {
+                maxElementPosition = (position) {i, j};
+                max = m.values[i][j];
+            }
+    return maxElementPosition;
+}

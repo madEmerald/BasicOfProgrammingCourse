@@ -44,3 +44,7 @@ bool isEMatrix(matrix m);
 bool isSymmetricMatrix(matrix m);
 
 void transposeSquareMatrix(matrix m);
+
+position getMinValuePos(matrix m);
+
+position getMaxValuePos(matrix m);

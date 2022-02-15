@@ -360,6 +360,70 @@ void test_transposeSquareMatrix() {
     freeMemMatrix(expectedMatrix);
 }
 
+void test_getMinValuePos_oneElement() {
+    matrix m = getMemMatrix(1, 1);
+    m.values[0][0] = 1;
+
+    position p = getMinValuePos(m);
+
+    assert(p.rowIndex == 0);
+    assert(p.colIndex == 0);
+    freeMemMatrix(m);
+}
+
+void test_getMinValuePos() {
+    matrix m = getMemMatrix(3, 3);
+
+    m.values[0][0] = 7;
+    m.values[0][1] = 10;
+    m.values[0][2] = 6;
+    m.values[1][0] = 9;
+    m.values[1][1] = 3;
+    m.values[1][2] = 5;
+    m.values[2][0] = 1;
+    m.values[2][1] = 2;
+    m.values[2][2] = 4;
+
+
+    position p = getMinValuePos(m);
+
+    assert(p.rowIndex == 2);
+    assert(p.colIndex == 0);
+    freeMemMatrix(m);
+}
+
+void test_getMaxValuePos_oneElement() {
+    matrix m = getMemMatrix(1, 1);
+    m.values[0][0] = 1;
+
+    position p = getMaxValuePos(m);
+
+    assert(p.rowIndex == 0);
+    assert(p.colIndex == 0);
+    freeMemMatrix(m);
+}
+
+void test_getMaxValuePos() {
+    matrix m = getMemMatrix(3, 3);
+
+    m.values[0][0] = 0;
+    m.values[0][1] = 6;
+    m.values[0][2] = 7;
+    m.values[1][0] = 3;
+    m.values[1][1] = 5;
+    m.values[1][2] = 9;
+    m.values[2][0] = 2;
+    m.values[2][1] = 4;
+    m.values[2][2] = 1;
+
+
+    position p = getMaxValuePos(m);
+
+    assert(p.rowIndex == 1);
+    assert(p.colIndex == 2);
+    freeMemMatrix(m);
+}
+
 void test() {
     test_swapRows();
     test_swapCols();
@@ -378,6 +442,10 @@ void test() {
     test_isSymmetricMatrix_notSymmetricMatrix();
     test_isSymmetricMatrix_SymmetricMatrix();
     test_transposeSquareMatrix();
+    test_getMinValuePos_oneElement();
+    test_getMinValuePos();
+    test_getMaxValuePos_oneElement();
+    test_getMaxValuePos();
 }
 
 int main() {
