@@ -5,15 +5,15 @@ int main() {
     int n;
     scanf("%d", &n);
 
-    matrix m = getMemMatrix(n, n);
-    inputMatrix(m);
+    matrix a = getMemMatrix(n, n);
+    inputMatrix(a);
 
-    int minElementRowIndex = getMinValuePos(m).rowIndex;
-    int maxElementRowIndex = getMaxValuePos(m).rowIndex;
+    int minElementRowIndex = getMinValuePos(a).rowIndex;
+    int maxElementRowIndex = getMaxValuePos(a).rowIndex;
 
-    swapRows(m, minElementRowIndex, maxElementRowIndex);
+    swapRows(a, minElementRowIndex, maxElementRowIndex);
 
-    outputMatrix(m);
+    outputMatrix(a);
 
     return 0;
 }
