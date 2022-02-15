@@ -13,6 +13,8 @@ malloc.h
 -
 stdio.h
 -
+assert.h
+-
 matrix.h
 C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/matrix/matrix.h
 ../../algorithms/basicAlgorithms/basicAlgorithms.h

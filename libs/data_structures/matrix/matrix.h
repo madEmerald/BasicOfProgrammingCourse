@@ -42,3 +42,5 @@ bool areTwoMatricesEqual(matrix m1, matrix m2);
 bool isEMatrix(matrix m);
 
 bool isSymmetricMatrix(matrix m);
+
+void transposeSquareMatrix(matrix m);

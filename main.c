@@ -326,6 +326,40 @@ void test_isSymmetricMatrix_notSymmetricMatrix() {
     freeMemMatrix(m);
 }
 
+void test_transposeSquareMatrix() {
+    matrix m = getMemMatrix(3, 3);
+    matrix expectedMatrix = getMemMatrix(3, 3);
+
+    m.values[0][0] = 1;
+    m.values[0][1] = 2;
+    m.values[0][2] = 4;
+    m.values[1][0] = 0;
+    m.values[1][1] = 9;
+    m.values[1][2] = 5;
+    m.values[2][0] = 8;
+    m.values[2][1] = 6;
+    m.values[2][2] = 3;
+
+    expectedMatrix.values[0][0] = 1;
+    expectedMatrix.values[0][1] = 0;
+    expectedMatrix.values[0][2] = 8;
+    expectedMatrix.values[1][0] = 2;
+    expectedMatrix.values[1][1] = 9;
+    expectedMatrix.values[1][2] = 6;
+    expectedMatrix.values[2][0] = 4;
+    expectedMatrix.values[2][1] = 5;
+    expectedMatrix.values[2][2] = 3;
+
+    transposeSquareMatrix(m);
+
+    for (int i = 0; i < m.nRows; i++)
+        for (int j = 0; j < m.nCols; j++)
+            assert(m.values[i][j] == expectedMatrix.values[i][j]);
+
+    freeMemMatrix(m);
+    freeMemMatrix(expectedMatrix);
+}
+
 void test() {
     test_swapRows();
     test_swapCols();
@@ -343,6 +377,7 @@ void test() {
     test_isSymmetricMatrix_oneElement();
     test_isSymmetricMatrix_notSymmetricMatrix();
     test_isSymmetricMatrix_SymmetricMatrix();
+    test_transposeSquareMatrix();
 }
 
 int main() {

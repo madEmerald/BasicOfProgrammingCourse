@@ -1,5 +1,6 @@
 #include <malloc.h>
 #include <stdio.h>
+#include <assert.h>
 #include "matrix.h"
 #include "../../algorithms/basicAlgorithms/basicAlgorithms.h"
 
@@ -144,4 +145,19 @@ bool isSymmetricMatrix(const matrix m) {
                 return false;
 
     return true;
+}
+
+void transposeSquareMatrix(matrix m) {
+    assert(isSquareMatrix(m));
+
+    matrix newMatrix = getMemMatrix(m.nRows, m.nCols);
+    for (int i = 0; i < m.nRows; i++)
+        for (int j = 0; j < m.nCols; j++)
+            newMatrix.values[i][j] = m.values[j][i];
+
+    for (int i = 0; i < m.nRows; i++)
+        for (int j = 0; j < m.nCols; j++)
+            m.values[i][j] = newMatrix.values[i][j];
+
+    freeMemMatrix(newMatrix);
 }
