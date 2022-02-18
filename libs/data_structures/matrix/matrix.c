@@ -73,36 +73,39 @@ void insertionSortRowsMatrixByRowCriteria(matrix m, int (*criteria)(int *, int))
         sortKeys[i] = criteria(m.values[i], m.nCols);
 
     for (size_t sortedPartLength = 1; sortedPartLength < m.nRows; sortedPartLength++) {
-        int t = sortKeys[sortedPartLength];
+        int *insertingRow = m.values[sortedPartLength];
+        int insertingRowKey = sortKeys[sortedPartLength];
         int i = sortedPartLength;
-        while (i > 0 && sortKeys[i - 1] > t) {
-            swap(&sortKeys[i], &sortKeys[i - 1], sizeof(int));
-            swapRows(m, i, i - 1);
+        while (i > 0 && sortKeys[i - 1] > insertingRowKey) {
+            m.values[i] = m.values[i - 1];
+            sortKeys[i] = sortKeys[i - 1];
             i--;
         }
+        m.values[i] = insertingRow;
+        sortKeys[i] = insertingRowKey;
     }
     free(sortKeys);
 }
 
-void insertionSortColsMatrixByColCriteria(matrix m, int (*criteria)(int *, int)) {
+void selectionSortColsMatrixByColCriteria(matrix m, int (*criteria)(int *, int)) {
     int *sortKeys = malloc(m.nCols * sizeof(int));
-    int *colElements = malloc(m.nRows * sizeof(int));
+    int *column = malloc(m.nRows * sizeof(int));
     for (int j = 0; j < m.nCols; j++) {
         for (int i = 0; i < m.nRows; i++)
-            colElements[i] = m.values[i][j];
+            column[i] = m.values[i][j];
 
-        sortKeys[j] = criteria(colElements, m.nRows);
+        sortKeys[j] = criteria(column, m.nRows);
     }
-    free(colElements);
+    free(column);
 
-    for (size_t sortedPartLength = 1; sortedPartLength < m.nCols; sortedPartLength++) {
-        int t = sortKeys[sortedPartLength];
-        int j = sortedPartLength;
-        while (j > 0 && sortKeys[j - 1] > t) {
-            swap(&sortKeys[j], &sortKeys[j - 1], sizeof(int));
-            swapCols(m, j, j - 1);
-            j--;
-        }
+    for (size_t sortedPartLength = 0; sortedPartLength < m.nCols - 1; sortedPartLength++) {
+        int minPos = sortedPartLength;
+        for (int j = sortedPartLength + 1; j < m.nCols; j++)
+            if (sortKeys[j] < sortKeys[minPos])
+                minPos = j;
+
+        swap(&sortKeys[sortedPartLength], &sortKeys[minPos], sizeof(int));
+        swapCols(m, sortedPartLength, minPos);
     }
     free(sortKeys);
 }
