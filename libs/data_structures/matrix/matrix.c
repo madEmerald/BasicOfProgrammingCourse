@@ -45,12 +45,14 @@ void inputMatrices(matrix *ms, int nMatrices) {
 }
 
 void outputMatrix(matrix m) {
+    printf("{");
     for (int i = 0; i < m.nRows; i++) {
         for (int j = 0; j < m.nCols; j++)
             printf("%d ", m.values[i][j]);
-        printf("\n");
+        if (i == m.nRows - 1)
+            printf("\b}");
+        printf("\n ");
     }
-    printf("\n");
 }
 
 void outputMatrices(matrix *ms, int nMatrices) {
@@ -126,6 +128,9 @@ bool areTwoMatricesEqual(const matrix m1, const matrix m2) {
 }
 
 bool isEMatrix(const matrix m) {
+    if (!isSquareMatrix(m))
+        return false;
+
     for (int i = 0; i < m.nRows; i++)
         for (int j = 0; j < m.nCols; j++)
             if (i == j) {
