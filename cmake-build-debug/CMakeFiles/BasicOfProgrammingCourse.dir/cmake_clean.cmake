@@ -2,7 +2,7 @@ file(REMOVE_RECURSE
   "BasicOfProgrammingCourse.exe"
   "BasicOfProgrammingCourse.exe.manifest"
   "BasicOfProgrammingCourse.pdb"
-  "CMakeFiles/BasicOfProgrammingCourse.dir/9.c.obj"
+  "CMakeFiles/BasicOfProgrammingCourse.dir/main.c.obj"
   "libBasicOfProgrammingCourse.dll.a"
 )
 

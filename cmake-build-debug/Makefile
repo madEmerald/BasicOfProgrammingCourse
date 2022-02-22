@@ -154,29 +154,29 @@ algorithms/fast:
 	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
-9.obj: 9.c.obj
-.PHONY : 9.obj
+main.obj: main.c.obj
+.PHONY : main.obj
 
 # target to build an object file
-9.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/9.c.obj
-.PHONY : 9.c.obj
+main.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/main.c.obj
+.PHONY : main.c.obj
 
-9.i: 9.c.i
-.PHONY : 9.i
+main.i: main.c.i
+.PHONY : main.i
 
 # target to preprocess a source file
-9.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/9.c.i
-.PHONY : 9.c.i
+main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/main.c.i
+.PHONY : main.c.i
 
-9.s: 9.c.s
-.PHONY : 9.s
+main.s: main.c.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-9.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/9.c.s
-.PHONY : 9.c.s
+main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo ... BasicOfProgrammingCourse
 	@echo ... algorithms
 	@echo ... data_structures
-	@echo ... 9.obj
-	@echo ... 9.i
-	@echo ... 9.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 

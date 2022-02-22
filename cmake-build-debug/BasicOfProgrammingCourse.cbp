@@ -146,9 +146,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/9.c">
-			<Option target="BasicOfProgrammingCourse"/>
-		</Unit>
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/algorithms/basicAlgorithms/basicAlgorithms.c">
 			<Option target="algorithms"/>
 		</Unit>
@@ -178,6 +175,9 @@
 		</Unit>
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vectorVoid.h">
 			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/main.c">
+			<Option target="BasicOfProgrammingCourse"/>
 		</Unit>
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
