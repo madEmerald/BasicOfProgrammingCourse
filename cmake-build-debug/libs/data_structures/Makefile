@@ -177,6 +177,30 @@ matrix/matrix.c.s:
 	cd /d C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix.c.s
 .PHONY : matrix/matrix.c.s
 
+string/string_.obj: string/string_.c.obj
+.PHONY : string/string_.obj
+
+# target to build an object file
+string/string_.c.obj:
+	cd /d C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string/string_.c.obj
+.PHONY : string/string_.c.obj
+
+string/string_.i: string/string_.c.i
+.PHONY : string/string_.i
+
+# target to preprocess a source file
+string/string_.c.i:
+	cd /d C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string/string_.c.i
+.PHONY : string/string_.c.i
+
+string/string_.s: string/string_.c.s
+.PHONY : string/string_.s
+
+# target to generate assembly for a file
+string/string_.c.s:
+	cd /d C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string/string_.c.s
+.PHONY : string/string_.c.s
+
 vector/vector.obj: vector/vector.c.obj
 .PHONY : vector/vector.obj
 
@@ -240,6 +264,9 @@ help:
 	@echo ... matrix/matrix.obj
 	@echo ... matrix/matrix.i
 	@echo ... matrix/matrix.s
+	@echo ... string/string_.obj
+	@echo ... string/string_.i
+	@echo ... string/string_.s
 	@echo ... vector/vector.obj
 	@echo ... vector/vector.i
 	@echo ... vector/vector.s

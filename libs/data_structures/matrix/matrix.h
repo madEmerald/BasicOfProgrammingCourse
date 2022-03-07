@@ -1,3 +1,6 @@
+#ifndef MATRIX_H
+#define MATRIX_H
+
 #include <stdbool.h>
 
 typedef struct matrix {
@@ -54,3 +57,5 @@ matrix createMatrixFromArray(const int *a, size_t nRows, size_t nCols);
 matrix *createArrayOfMatrixFromArray(const int *values, size_t nMatrices, size_t nRows, size_t nCols);
 
 matrix mulMatrices(matrix m1, matrix m2);
+
+#endif

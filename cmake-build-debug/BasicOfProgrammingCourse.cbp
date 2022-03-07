@@ -146,9 +146,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/15.c">
-			<Option target="BasicOfProgrammingCourse"/>
-		</Unit>
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/algorithms/basicAlgorithms/basicAlgorithms.c">
 			<Option target="algorithms"/>
 		</Unit>
@@ -167,6 +164,12 @@
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/matrix/matrix.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/string/string_.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/string/string_.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.c">
 			<Option target="data_structures"/>
 		</Unit>
@@ -178,6 +181,9 @@
 		</Unit>
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vectorVoid.h">
 			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/main.c">
+			<Option target="BasicOfProgrammingCourse"/>
 		</Unit>
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
