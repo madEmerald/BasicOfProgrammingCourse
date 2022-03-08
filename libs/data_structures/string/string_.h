@@ -1,7 +1,9 @@
 #ifndef STRPROJECT_STRING__H
 #define STRPROJECT_STRING__H
 
-size_t strlen_(const char *begin);
+#include <stdlib.h>
+
+size_t strlen_(char *begin);
 
 char *find(char *begin, char *end, int ch);
 
@@ -22,5 +24,7 @@ char* copyIf(char *beginSource, const char *endSource, char *beginDestination, i
 char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int));
 
 char *getEndOfString(char *s);
+
+void assertString(const char *expected, char *got, char const *fileName, char const *funcName, int line);
 
 #endif

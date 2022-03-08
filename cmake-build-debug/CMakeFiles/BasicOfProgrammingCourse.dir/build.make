@@ -65,27 +65,27 @@ include CMakeFiles/BasicOfProgrammingCourse.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/BasicOfProgrammingCourse.dir/flags.make
 
-CMakeFiles/BasicOfProgrammingCourse.dir/main.c.obj: CMakeFiles/BasicOfProgrammingCourse.dir/flags.make
-CMakeFiles/BasicOfProgrammingCourse.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/BasicOfProgrammingCourse.dir/main.c.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\BasicOfProgrammingCourse.dir\main.c.obj -c C:\CLionProjects\BasicOfProgrammingCourse\main.c
+CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.obj: CMakeFiles/BasicOfProgrammingCourse.dir/flags.make
+CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.obj: ../libs/data_structures/string/tasks/2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\BasicOfProgrammingCourse.dir\libs\data_structures\string\tasks\2.c.obj -c C:\CLionProjects\BasicOfProgrammingCourse\libs\data_structures\string\tasks\2.c
 
-CMakeFiles/BasicOfProgrammingCourse.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BasicOfProgrammingCourse.dir/main.c.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\CLionProjects\BasicOfProgrammingCourse\main.c > CMakeFiles\BasicOfProgrammingCourse.dir\main.c.i
+CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\CLionProjects\BasicOfProgrammingCourse\libs\data_structures\string\tasks\2.c > CMakeFiles\BasicOfProgrammingCourse.dir\libs\data_structures\string\tasks\2.c.i
 
-CMakeFiles/BasicOfProgrammingCourse.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BasicOfProgrammingCourse.dir/main.c.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\CLionProjects\BasicOfProgrammingCourse\main.c -o CMakeFiles\BasicOfProgrammingCourse.dir\main.c.s
+CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\CLionProjects\BasicOfProgrammingCourse\libs\data_structures\string\tasks\2.c -o CMakeFiles\BasicOfProgrammingCourse.dir\libs\data_structures\string\tasks\2.c.s
 
 # Object files for target BasicOfProgrammingCourse
 BasicOfProgrammingCourse_OBJECTS = \
-"CMakeFiles/BasicOfProgrammingCourse.dir/main.c.obj"
+"CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.obj"
 
 # External object files for target BasicOfProgrammingCourse
 BasicOfProgrammingCourse_EXTERNAL_OBJECTS =
 
-BasicOfProgrammingCourse.exe: CMakeFiles/BasicOfProgrammingCourse.dir/main.c.obj
+BasicOfProgrammingCourse.exe: CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.obj
 BasicOfProgrammingCourse.exe: CMakeFiles/BasicOfProgrammingCourse.dir/build.make
 BasicOfProgrammingCourse.exe: libs/data_structures/libdata_structures.a
 BasicOfProgrammingCourse.exe: libs/algorithms/libalgorithms.a

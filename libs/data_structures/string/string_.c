@@ -1,8 +1,8 @@
-#include <stdlib.h>
+#include <stdio.h>
 #include <memory.h>
 #include "string_.h"
 
-size_t strlen_(const char *begin) {
+size_t strlen_(char *begin) {
     char *end = begin;
     while (*end != '\0')
         end++;
@@ -46,7 +46,11 @@ char *findSpaceReverse(char *rbegin, const char *rend) {
 }
 
 int strcmp(const char *lhs, const char *rhs) {
+
     while (*lhs == *rhs) {
+        if (*lhs == '\0' || *rhs == '\0')
+            return 0;
+
         lhs++;
         rhs++;
     }
@@ -54,13 +58,13 @@ int strcmp(const char *lhs, const char *rhs) {
     return *lhs - *rhs;
 }
 
-char* copy(const char *beginSource, const char *endSource, char *beginDestination) {
+char *copy(const char *beginSource, const char *endSource, char *beginDestination) {
     size_t nElements = endSource - beginSource;
 
     return memcpy(beginDestination, beginSource, sizeof(char) * nElements) + nElements;
 }
 
-char* copyIf(char *beginSource, const char *endSource, char *beginDestination, int (*f)(int)) {
+char *copyIf(char *beginSource, const char *endSource, char *beginDestination, int (*f)(int)) {
     while (beginSource != endSource) {
         if (f(*beginSource)) {
             *beginDestination = *beginSource;
@@ -71,7 +75,7 @@ char* copyIf(char *beginSource, const char *endSource, char *beginDestination, i
     return beginDestination;
 }
 
-char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int)) {
+char *copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int)) {
     while (rbeginSource != rendSource) {
         if (f(*rbeginSource)) {
             *beginDestination = *rbeginSource;
@@ -84,4 +88,15 @@ char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDesti
 
 char *getEndOfString(char *s) {
     return s + strlen_(s);
+}
+
+void assertString(const char *expected, char *got, char const *fileName, char const *funcName, int line) {
+    if (strcmp(expected, got)) {
+        fprintf(stderr, "File %s\n", fileName);
+        fprintf(stderr, "%s - failed on line %d\n", funcName, line);
+        fprintf(stderr, "Expected: \"%s\"\n", expected);
+        fprintf(stderr, "Got: \"%s\"\n\n", got);
+    }
+    else
+        fprintf(stderr, "%s - OK\n", funcName);
 }

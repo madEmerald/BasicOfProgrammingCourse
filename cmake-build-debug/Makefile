@@ -154,29 +154,29 @@ algorithms/fast:
 	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
-main.obj: main.c.obj
-.PHONY : main.obj
+libs/data_structures/string/tasks/2.obj: libs/data_structures/string/tasks/2.c.obj
+.PHONY : libs/data_structures/string/tasks/2.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/main.c.obj
-.PHONY : main.c.obj
+libs/data_structures/string/tasks/2.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.obj
+.PHONY : libs/data_structures/string/tasks/2.c.obj
 
-main.i: main.c.i
-.PHONY : main.i
+libs/data_structures/string/tasks/2.i: libs/data_structures/string/tasks/2.c.i
+.PHONY : libs/data_structures/string/tasks/2.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/main.c.i
-.PHONY : main.c.i
+libs/data_structures/string/tasks/2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.i
+.PHONY : libs/data_structures/string/tasks/2.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+libs/data_structures/string/tasks/2.s: libs/data_structures/string/tasks/2.c.s
+.PHONY : libs/data_structures/string/tasks/2.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/main.c.s
-.PHONY : main.c.s
+libs/data_structures/string/tasks/2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.s
+.PHONY : libs/data_structures/string/tasks/2.c.s
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo ... BasicOfProgrammingCourse
 	@echo ... algorithms
 	@echo ... data_structures
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... libs/data_structures/string/tasks/2.obj
+	@echo ... libs/data_structures/string/tasks/2.i
+	@echo ... libs/data_structures/string/tasks/2.s
 .PHONY : help
 
 

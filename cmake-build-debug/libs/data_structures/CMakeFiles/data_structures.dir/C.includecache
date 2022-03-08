@@ -6,21 +6,15 @@
 
 #IncludeRegexTransform: 
 
-C:/CLionProjects/BasicOfProgrammingCourse/libs/algorithms/basicAlgorithms/basicAlgorithms.h
-
-C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/matrix/matrix.c
-malloc.h
--
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/string/string_.c
 stdio.h
 -
-assert.h
+memory.h
 -
-matrix.h
-C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/matrix/matrix.h
-../../algorithms/basicAlgorithms/basicAlgorithms.h
-C:/CLionProjects/BasicOfProgrammingCourse/libs/algorithms/basicAlgorithms/basicAlgorithms.h
+string_.h
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/string/string_.h
 
-C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/matrix/matrix.h
-stdbool.h
+C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/string/string_.h
+stdlib.h
 -
 

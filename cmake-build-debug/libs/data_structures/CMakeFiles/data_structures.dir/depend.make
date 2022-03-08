@@ -8,6 +8,15 @@ libs/data_structures/CMakeFiles/data_structures.dir/matrix/matrix.c.obj: \
  ../libs/algorithms/basicAlgorithms/basicAlgorithms.h \
  ../libs/data_structures/matrix/matrix.c \
  ../libs/data_structures/matrix/matrix.h
+libs/data_structures/CMakeFiles/data_structures.dir/string/string_.c.obj: \
+ ../libs/data_structures/string/string_.c \
+ ../libs/data_structures/string/string_.h
+libs/data_structures/CMakeFiles/data_structures.dir/string/tasks/1.c.obj: \
+ ../libs/data_structures/string/string_.h \
+ ../libs/data_structures/string/tasks/1.c
+libs/data_structures/CMakeFiles/data_structures.dir/string/tasks/2.c.obj: \
+ ../libs/data_structures/string/string_.h \
+ ../libs/data_structures/string/tasks/2.c
 libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj: \
  ../libs/algorithms/basicAlgorithms/basicAlgorithms.h \
  ../libs/data_structures/errors/errors.h \
