@@ -170,6 +170,12 @@
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/string/string_.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/string/tasks/1.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/string/tasks/2.c">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.c">
 			<Option target="data_structures"/>
 		</Unit>

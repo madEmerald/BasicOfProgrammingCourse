@@ -21,4 +21,6 @@ char* copyIf(char *beginSource, const char *endSource, char *beginDestination, i
 
 char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int));
 
+char *getEndOfString(char *s);
+
 #endif
