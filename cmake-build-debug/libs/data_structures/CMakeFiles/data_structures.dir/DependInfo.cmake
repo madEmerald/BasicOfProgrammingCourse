@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/string/string_.c" "C:/CLionProjects/BasicOfProgrammingCourse/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/string/string_.c.obj"
   "C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/string/tasks/1.c" "C:/CLionProjects/BasicOfProgrammingCourse/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/string/tasks/1.c.obj"
   "C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/string/tasks/2.c" "C:/CLionProjects/BasicOfProgrammingCourse/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/string/tasks/2.c.obj"
+  "C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/string/tasks/3.c" "C:/CLionProjects/BasicOfProgrammingCourse/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/string/tasks/3.c.obj"
   "C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vector.c" "C:/CLionProjects/BasicOfProgrammingCourse/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/vector/vector.c.obj"
   "C:/CLionProjects/BasicOfProgrammingCourse/libs/data_structures/vector/vectorVoid.c" "C:/CLionProjects/BasicOfProgrammingCourse/cmake-build-debug/libs/data_structures/CMakeFiles/data_structures.dir/vector/vectorVoid.c.obj"
   )

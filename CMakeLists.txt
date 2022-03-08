@@ -4,7 +4,7 @@ project(BasicOfProgrammingCourse C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(BasicOfProgrammingCourse
-        libs/data_structures/string/tasks/2.c)
+        libs/data_structures/string/tasks/3.c)
 add_subdirectory(libs)
 
 target_link_libraries(BasicOfProgrammingCourse data_structures)

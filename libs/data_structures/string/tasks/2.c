@@ -18,28 +18,28 @@ void removeAdjacentEqualLetters(char *s) {
     *destination = '\0';
 }
 
-void test_digitToStartTransform_emptyString() {
+void test_removeAdjacentEqualLetters_emptyString() {
     char s[] = "";
     removeAdjacentEqualLetters(s);
     ASSERT_STRING("", s);
 }
 
-void test_digitToStartTransform_singleLetterAtBegin() {
+void test_removeAdjacentEqualLetters_singleLetterAtBegin() {
     char s[] = "122234444";
     removeAdjacentEqualLetters(s);
     ASSERT_STRING("1234", s);
 }
 
-void test_digitToStartTransform_singleLetterAtEnd() {
+void test_removeAdjacentEqualLetters_singleLetterAtEnd() {
     char s[] = "11112333334";
     removeAdjacentEqualLetters(s);
     ASSERT_STRING("1234", s);
 }
 
 int main() {
-    test_digitToStartTransform_emptyString();
-    test_digitToStartTransform_singleLetterAtBegin();
-    test_digitToStartTransform_singleLetterAtEnd();
+    test_removeAdjacentEqualLetters_emptyString();
+    test_removeAdjacentEqualLetters_singleLetterAtBegin();
+    test_removeAdjacentEqualLetters_singleLetterAtEnd();
 
     return 1;
 }

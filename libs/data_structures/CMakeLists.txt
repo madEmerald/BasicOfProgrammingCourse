@@ -5,4 +5,5 @@ add_library(data_structures
         matrix/matrix.h matrix/matrix.c
         string/string_.h string/string_.c
         string/tasks/1.c
-        string/tasks/2.c)
+        string/tasks/2.c
+        string/tasks/3.c)

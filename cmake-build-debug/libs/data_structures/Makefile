@@ -249,6 +249,30 @@ string/tasks/2.c.s:
 	cd /d C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string/tasks/2.c.s
 .PHONY : string/tasks/2.c.s
 
+string/tasks/3.obj: string/tasks/3.c.obj
+.PHONY : string/tasks/3.obj
+
+# target to build an object file
+string/tasks/3.c.obj:
+	cd /d C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string/tasks/3.c.obj
+.PHONY : string/tasks/3.c.obj
+
+string/tasks/3.i: string/tasks/3.c.i
+.PHONY : string/tasks/3.i
+
+# target to preprocess a source file
+string/tasks/3.c.i:
+	cd /d C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string/tasks/3.c.i
+.PHONY : string/tasks/3.c.i
+
+string/tasks/3.s: string/tasks/3.c.s
+.PHONY : string/tasks/3.s
+
+# target to generate assembly for a file
+string/tasks/3.c.s:
+	cd /d C:\CLionProjects\BasicOfProgrammingCourse\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/string/tasks/3.c.s
+.PHONY : string/tasks/3.c.s
+
 vector/vector.obj: vector/vector.c.obj
 .PHONY : vector/vector.obj
 
@@ -321,6 +345,9 @@ help:
 	@echo ... string/tasks/2.obj
 	@echo ... string/tasks/2.i
 	@echo ... string/tasks/2.s
+	@echo ... string/tasks/3.obj
+	@echo ... string/tasks/3.i
+	@echo ... string/tasks/3.s
 	@echo ... vector/vector.obj
 	@echo ... vector/vector.i
 	@echo ... vector/vector.s

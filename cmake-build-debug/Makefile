@@ -154,29 +154,29 @@ algorithms/fast:
 	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
-libs/data_structures/string/tasks/2.obj: libs/data_structures/string/tasks/2.c.obj
-.PHONY : libs/data_structures/string/tasks/2.obj
+libs/data_structures/string/tasks/3.obj: libs/data_structures/string/tasks/3.c.obj
+.PHONY : libs/data_structures/string/tasks/3.obj
 
 # target to build an object file
-libs/data_structures/string/tasks/2.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.obj
-.PHONY : libs/data_structures/string/tasks/2.c.obj
+libs/data_structures/string/tasks/3.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/3.c.obj
+.PHONY : libs/data_structures/string/tasks/3.c.obj
 
-libs/data_structures/string/tasks/2.i: libs/data_structures/string/tasks/2.c.i
-.PHONY : libs/data_structures/string/tasks/2.i
+libs/data_structures/string/tasks/3.i: libs/data_structures/string/tasks/3.c.i
+.PHONY : libs/data_structures/string/tasks/3.i
 
 # target to preprocess a source file
-libs/data_structures/string/tasks/2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.i
-.PHONY : libs/data_structures/string/tasks/2.c.i
+libs/data_structures/string/tasks/3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/3.c.i
+.PHONY : libs/data_structures/string/tasks/3.c.i
 
-libs/data_structures/string/tasks/2.s: libs/data_structures/string/tasks/2.c.s
-.PHONY : libs/data_structures/string/tasks/2.s
+libs/data_structures/string/tasks/3.s: libs/data_structures/string/tasks/3.c.s
+.PHONY : libs/data_structures/string/tasks/3.s
 
 # target to generate assembly for a file
-libs/data_structures/string/tasks/2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/2.c.s
-.PHONY : libs/data_structures/string/tasks/2.c.s
+libs/data_structures/string/tasks/3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BasicOfProgrammingCourse.dir\build.make CMakeFiles/BasicOfProgrammingCourse.dir/libs/data_structures/string/tasks/3.c.s
+.PHONY : libs/data_structures/string/tasks/3.c.s
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo ... BasicOfProgrammingCourse
 	@echo ... algorithms
 	@echo ... data_structures
-	@echo ... libs/data_structures/string/tasks/2.obj
-	@echo ... libs/data_structures/string/tasks/2.i
-	@echo ... libs/data_structures/string/tasks/2.s
+	@echo ... libs/data_structures/string/tasks/3.obj
+	@echo ... libs/data_structures/string/tasks/3.i
+	@echo ... libs/data_structures/string/tasks/3.s
 .PHONY : help
 
 
